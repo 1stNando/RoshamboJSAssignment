@@ -7,7 +7,20 @@
     <title>Rock-Paper-Scissors</title>
   </head>
   <body>
-    <div id="app">Hello, World!</div>
+    <h1>Rock Paper Scissors!</h1>
+    <h2>Player 1 chose the move:</h2>
+    <button onclick="playerOneThrows('rock')">Rock</button>
+    <button onclick="playerOneThrows('paper')">Paper</button>
+    <button onclick="playerOneThrows('scissors')">Scissors</button>
+
+    <h2>Player 2 chose the move:</h2>
+    <button onclick="playerTwoThrows('rock')">Rock</button>
+    <button onclick="playerTwoThrows('paper')">Paper</button>
+    <button onclick="playerTwoThrows('scissors')">Scissors</button>
+
+    <h2>Result</h2>
+    <p id="result"></p>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
