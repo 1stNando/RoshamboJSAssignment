@@ -1,2 +1,35 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
 
+h1 {
+  margin-top: 50px;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.player {
+  margin: 0 30px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+#result-container {
+  margin-top: 50px;
+}
+
+#reset-btn {
+  margin-top: 20px;
+}
+
+#result {
+  font-weight: bold;
+}
 
