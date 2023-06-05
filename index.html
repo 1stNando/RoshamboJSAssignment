@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock-Paper-Scissors</title>
+    <title>Rock-Paper-Scissors Game</title>
   </head>
   <body>
-    <h1>Rock Paper Scissors!</h1>
-    <h2>Player 1 chose the move:</h2>
-    <button onclick="playerOneThrows('rock')">Rock</button>
-    <button onclick="playerOneThrows('paper')">Paper</button>
-    <button onclick="playerOneThrows('scissors')">Scissors</button>
+    <h1>Rock, Paper, Scissors Game!</h1>
+    <div id="game-container">
+      <div class="player">
+        <h2>Player One</h2>
+        <button class="rock-btn">Rock</button>
+        <button class="paper-btn">Paper</button>
+        <button class="scissors-btn">Scissors</button>
+      </div>
+      <div class="player">
+        <h2>Player Two</h2>
+        <button class="rock-btn">Rock</button>
+        <button class="paper-btn">Paper</button>
+        <button class="scissors-btn">Scissors</button>
+      </div>
+      <div id="result-container">
+        <h2 id="result">Choose your moves!</h2>
+        <button id="reset-btn" disabled>Reset</button>
+      </div>
+    </div>
 
-    <h2>Player 2 chose the move:</h2>
-    <button onclick="playerTwoThrows('rock')">Rock</button>
-    <button onclick="playerTwoThrows('paper')">Paper</button>
-    <button onclick="playerTwoThrows('scissors')">Scissors</button>
-
-    <h2>Result</h2>
-    <p id="result"></p>
+    
 
     <script type="module" src="/src/main.ts"></script>
   </body>
