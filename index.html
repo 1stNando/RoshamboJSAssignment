@@ -7,27 +7,31 @@
     <title>Rock-Paper-Scissors Game</title>
   </head>
   <body>
-    <h1>Rock, Paper, Scissors Game!</h1>
-    <div id="game-container">
-      <div class="player">
-        <h2>Player One</h2>
-        <button class="rock-btn">Rock</button>
-        <button class="paper-btn">Paper</button>
-        <button class="scissors-btn">Scissors</button>
-      </div>
-      <div class="player">
-        <h2>Player Two</h2>
-        <button class="rock-btn">Rock</button>
-        <button class="paper-btn">Paper</button>
-        <button class="scissors-btn">Scissors</button>
-      </div>
-      <div id="result-container">
-        <h2 id="result">Choose your moves!</h2>
-        <button id="reset-btn" disabled>Reset</button>
-      </div>
-    </div>
+     <header>Roshambo 2023</header>
 
-    
+    <main>
+      <section class="score-board">
+        <span class="player1">Player One</span>
+        <span class="p1Score">0</span>
+        <span>score</span>
+        <span class="p2Score">0</span>
+        <span class="player2">Player Two</span>
+      </section>
+      
+      <section>
+        <h2>Press the START button to play</h2>
+      </section>
+
+      <section class="gameButtons">
+        <fieldset>
+          <button class="start">START</button>
+          <button class="endGame">Restart</button>
+        </fieldset>
+      </section>
+
+      
+      
+    </main>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
