@@ -30,3 +30,28 @@ section { /*This alone makes everything symmetrical layout */
   display: flex;
   justify-content: space-around;
 }
+
+div {
+  /*???????????*/
+  display: flex;
+  justify-content: space-around;
+}
+
+.score-board {
+  padding-top: 1.5rem;
+  font-family: cursive;
+  font-size: 50px;
+  font-weight: 1000;
+
+}
+
+.player1 {
+  padding-left: 10rem;
+}
+
+.player2 {
+  padding-right: 10rem;
+}
+
+
+
