@@ -53,5 +53,11 @@ div {
   padding-right: 10rem;
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
