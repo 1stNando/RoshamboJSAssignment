@@ -124,6 +124,14 @@ function handleStartTheGame() {
   startGameButton.style.display = 'none'
 }
 
+// End of the game function
+function handleEndTheGame() {
+  const valueCountPlayer1 = document.querySelector('.playerOneScore') 
+  playerOne = 0
+  if (valueCountPlayer1 instanceof HTMLBodyElement)
+  valueCountPlayer1.textContent = `${playerOne}`
+}
+
 
 // Main game:
 const main = () => {
