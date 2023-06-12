@@ -53,7 +53,7 @@ function handleEndButtonPlayerOne(event) {
 
 }
 
-// Handle the END button PlayerTwo
+// Handle the END button PlayerTwo. End of game and comparison of choice to determine winner.
 function handleEndButtonPlayerTwo(event) {
   const playerOneCard = document.querySelector('.playerOneCard')
   playerOneCard.style.display = 'flex'
@@ -74,7 +74,23 @@ function handleEndButtonPlayerTwo(event) {
     return
   }
 
-  
+  if (
+    (playerOneChoice === 'rock' && playerTwoChoice === 'scissor') ||
+    (playerOneChoice === 'scissor' &&  playerTwoChoice === 'paper') ||
+    (playerOneChoice === 'paper' && playerTwoChoice === 'rock') 
+  ) {
+    const playerOneWin = document.querySelector('.playerOneScore')
+    playerOne++
+    playerOneWin.textContent = `${playerOne}`
+    const displayWinner = document.querySelector('.label')
+    displayWinner?.textContent = 'Player one wins!'
+  } else {
+    const playerTwoWin = document.querySelector('.playerTwoScore')
+    playerTwo++
+    playerTwoWin?.textContent = '${playerTwo}'
+    const displayWinner = document.querySelector('.labe')
+    displayWinner?.textContent = 'Player two wins!'
+  }
 }
 
 
