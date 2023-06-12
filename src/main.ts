@@ -133,11 +133,22 @@ function handleEndTheGame() {
 }
 
 
-// Main game:
+// Main game. NOTE: we first had to write all the functions for each action before being able to apply them. Only then could we put together the code for "main".
 const main = () => {
   const playerOneRock = document.querySelector('.playerOneCard .rock')
-  if (playerOneRock instanceof HTMLButtonElement)
-  playerOneRock.addEventListener('click', handlePlayerOneRockSelection)
+  // if (playerOneRock instanceof HTMLButtonElement)
+  playerOneRock?.addEventListener('click', handlePlayerOneRockSelection)
+
+  const playerOnePaper = document.querySelector('.playerOneCard .paper')
+  playerOnePaper?.addEventListener('click', handlePlayerOnePaperSelection)
+
+  const playerOneScissors = document.querySelector('.playerOneCard .paper')
+  playerOneScissors?.addEventListener('click', handlePlayerOneScissorSelection)
+
+  // Player Two handlers'
+  const playerTwoRock = document.querySelector('.playerTwoCard .rock')
+  playerTwoRock?.addEventListener('click', handlePlayerTwoRockSelection)
+
 
 
 
