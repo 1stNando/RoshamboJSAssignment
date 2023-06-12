@@ -155,7 +155,18 @@ const main = () => {
   const playerTwoScissor = document.querySelector('.playerTwoCard .scissor')
   playerTwoScissor?.addEventListener('click', handlePlayerTwoScissorSelection)
 
-  
+  // Start/End game button and player buttons logic
+  const buttonPlayerOne = document.querySelector('.endButtonPlayerOne')
+  buttonPlayerOne?.addEventListener('click', handleEndButtonPlayerOne)
+
+  const buttonPlayerTwo = document.querySelector('.endButtonPlayerTwo button')
+  buttonPlayerTwo?.addEventListener('click', handleEndButtonPlayerTwo)
+
+  const startGame = document.querySelector('.gameButtons')
+  startGame?.addEventListener('click', handleStartTheGame)
+
+  const endGame = document.querySelector('.gameButtons')
+  endGame?.addEventListener('click', handleEndTheGame)
 
 
 
