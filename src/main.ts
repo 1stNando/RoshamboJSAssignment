@@ -149,6 +149,14 @@ const main = () => {
   const playerTwoRock = document.querySelector('.playerTwoCard .rock')
   playerTwoRock?.addEventListener('click', handlePlayerTwoRockSelection)
 
+  const playerTwoPaper = document.querySelector('.playerTwoCard .paper')
+  playerTwoPaper?.addEventListener('click', handlePlayerTwoPaperSelection)
+
+  const playerTwoScissor = document.querySelector('.playerTwoCard .scissor')
+  playerTwoScissor?.addEventListener('click', handlePlayerTwoScissorSelection)
+
+  
+
 
 
 
