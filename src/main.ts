@@ -21,26 +21,30 @@ function handlePlayerOnePaperSelection() {
 }
 
 function handlePlayerOneScissorSelection() {
-  document.querySelector('.playerOneCard .blankImage').src = 'https://i.pinimg.com/originals/ef/8d/3c/ef8d3c61d0b582fcd78e77c397014c16.jpg'
+  let scissorElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
+  scissorElement.src = 'https://i.pinimg.com/originals/ef/8d/3c/ef8d3c61d0b582fcd78e77c397014c16.jpg'
   playerOneChoice = 'scissor'
 }
 
 // PlayerTwo selections
 function handlePlayerTwoRockSelection() {
-  document.querySelector('.playerTwoCard .blankImage').src = 'https://png.pngtree.com/element_pic/16/10/28/6eacc2db03f5ffc7ea42318104d84c45.jpg'
+  let rockElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
+  rockElement.src = 'https://png.pngtree.com/element_pic/16/10/28/6eacc2db03f5ffc7ea42318104d84c45.jpg'
   
   playerTwoChoice = 'rock'
 }
 
 function handlePlayerTwoPaperSelection() {
-  document.querySelector('.playerTwoCard .blankImage').src = 'https://w7.pngwing.com/pngs/512/78/png-transparent-paper-bag-shopping-bags-trolleys-book-bag-food-accessories-sticker-thumbnail.png'
-  // document.querySelector('.playerTwoCard .blaknkImage').src = ''
+  let paperElement:HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
+  paperElement.src = 'https://w7.pngwing.com/pngs/512/78/png-transparent-paper-bag-shopping-bags-trolleys-book-bag-food-accessories-sticker-thumbnail.png'
   
   playerTwoChoice = 'paper'
 }
 
 function handlePlayerTwoScissorSelection() {
-  document.querySelector('.playerTwoCard .blankImage').src = 'https://i.pinimg.com/originals/ef/8d/3c/ef8d3c61d0b582fcd78e77c397014c16.jpg'
+  let scissorElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
+  scissorElement.src = 'https://i.pinimg.com/originals/ef/8d/3c/ef8d3c61d0b582fcd78e77c397014c16.jpg'
+  
   playerTwoChoice = 'scissor'
 }
 
