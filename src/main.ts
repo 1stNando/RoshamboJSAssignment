@@ -201,7 +201,7 @@ const main = () => {
   const startGame = document.querySelector('.start')
   startGame?.addEventListener('click', handleStartTheGame)
 
-  const endGame = document.querySelector('.end')
+  const endGame = document.querySelector('.endGame')
   endGame?.addEventListener('click', handleEndTheGame)
 }
 //content load method
