@@ -35,9 +35,9 @@ function handlePlayerOneSpockSelection() {
   playerOneChoice = 'spock'
 }
 
-function handlePlayerOneLizzardSelection() {
-  let lizzardElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
-  lizzardElement.src = 'https://t4.ftcdn.net/jpg/01/25/29/81/240_F_125298142_RssOlalEHDR7uEqRPwM7k3ine0Mfh9my.jpg'
+function handlePlayerOneLizardSelection() {
+  let lizardElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
+  lizardElement.src = 'https://t4.ftcdn.net/jpg/01/25/29/81/240_F_125298142_RssOlalEHDR7uEqRPwM7k3ine0Mfh9my.jpg'
   playerOneChoice = 'spock'
 }
 
@@ -69,9 +69,9 @@ function handlePlayerTwoSpockSelection() {
   playerTwoChoice = 'spock'
 }
 
-function handlePlayerTwoLizzardSelection() {
-  let lizzardElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
-  lizzardElement.src = 'https://t4.ftcdn.net/jpg/01/25/29/81/240_F_125298142_RssOlalEHDR7uEqRPwM7k3ine0Mfh9my.jpg'
+function handlePlayerTwoLizardSelection() {
+  let lizardElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
+  lizardElement.src = 'https://t4.ftcdn.net/jpg/01/25/29/81/240_F_125298142_RssOlalEHDR7uEqRPwM7k3ine0Mfh9my.jpg'
   playerTwoChoice = 'spock'
 }
 
@@ -205,6 +205,12 @@ const main = () => {
   const playerOneScissors = document.querySelector('.playerOneCard .scissors')
   playerOneScissors?.addEventListener('click', handlePlayerOneScissorSelection)
 
+  const playerOneSpock = document.querySelector('.playerOneCard .spock')
+  playerOneSpock?.addEventListener('click', handlePlayerOneSpockSelection)
+
+  const playerOneLizard = document.querySelector('.playerOneCard .lizard')
+  playerOneLizard?.addEventListener('click', handlePlayerOneLizardSelection)
+
   // Player Two handlers
   const playerTwoRock = document.querySelector('.playerTwoCard .rock')
   playerTwoRock?.addEventListener('click', handlePlayerTwoRockSelection)
@@ -214,6 +220,12 @@ const main = () => {
 
   const playerTwoScissor = document.querySelector('.playerTwoCard .scissor')
   playerTwoScissor?.addEventListener('click', handlePlayerTwoScissorSelection)
+
+  const playerTwoSpock = document.querySelector('.playerTwoCard .spock')
+  playerTwoSpock?.addEventListener('click', handlePlayerTwoSpockSelection)
+
+  const playerTwoLizard = document.querySelector('.playerTwoCard .lizard')
+  playerTwoLizard?.addEventListener('click', handlePlayerTwoLizardSelection)
 
   // Start/End game button and player buttons logic
   const buttonPlayerOne = document.querySelector('.endButtonPlayerOne')
