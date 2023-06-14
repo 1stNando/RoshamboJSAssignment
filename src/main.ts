@@ -50,6 +50,7 @@ function handlePlayerTwoScissorSelection() {
 
 // Handle the END button PlayerOne
 function handleEndButtonPlayerOne() {
+  // This first part deals with the event that P1 tries to click the end turn before clicking on an option.
   if (playerOneChoice === '') {
     const endLabel = document.querySelector('.label')
     if (endLabel instanceof HTMLButtonElement)
@@ -57,10 +58,12 @@ function handleEndButtonPlayerOne() {
     return
   }
 
+  // This part's focus is to HIDE the P1Card AFTER P1 clicks the end turn.
   const playerOneHidden = document.querySelector('.playerOneCard')
   if (playerOneHidden instanceof HTMLBodyElement)
   playerOneHidden.style.display = 'none'
 
+  // This last part handles the display of P2Card to be centered in the page.
   const playerTwoCard = document.querySelector('.playerTwoCard')
   if (playerTwoCard instanceof HTMLBodyElement)
   playerTwoCard.style.display = 'flex'
@@ -119,18 +122,22 @@ function handleEndButtonPlayerTwo() {
 
 // Start of the game function
 function handleStartTheGame() {
-  const playerTwoCard = document.querySelector('.playerTwoCard') 
-  if (playerTwoCard instanceof HTMLBodyElement)
-  playerTwoCard.style.display = 'none'
+  const playerTwoCard = document.querySelector('.playerTwoCard');
+  if (playerTwoCard instanceof HTMLElement) {
+    playerTwoCard.style.display = 'none';
+  }
 
-  const startGame = document.querySelector('.label')
-  if (startGame instanceof HTMLBodyElement)
-  startGame.textContent = 'Start the GAME!'
+  const startButton = document.querySelector('.start');
+  if (startButton instanceof HTMLButtonElement) {
+    startButton.textContent = 'Start the GAME!';
+  }
 
-  const startGameButton = document.querySelector('.gameButtons')
-  if (startGameButton instanceof HTMLBodyElement)
-  startGameButton.style.display = 'none'
+  const gameButtonsSection = document.querySelector('.gameButtons');
+  if (gameButtonsSection instanceof HTMLElement) {
+    gameButtonsSection.style.display = 'none';
+  }
 }
+
 
 // End of the game function
 function handleEndTheGame() {
@@ -144,7 +151,6 @@ function handleEndTheGame() {
 // Main game. NOTE: we first had to write all the functions for each action before being able to apply them. Only then could we put together the code for "main".
 const main = () => {
   const playerOneRock = document.querySelector('.playerOneCard .rock')
-  // if (playerOneRock instanceof HTMLButtonElement)
   playerOneRock?.addEventListener('click', handlePlayerOneRockSelection)
 
   const playerOnePaper = document.querySelector('.playerOneCard .paper')
