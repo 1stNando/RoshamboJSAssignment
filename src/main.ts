@@ -167,31 +167,31 @@ if (endButtonPlayerOne instanceof HTMLButtonElement) {
 //   }
 // }
 function handleEndButtonPlayerTwo() {
-  const playerOneCard = document.querySelector('.playerOneCard');
+  const playerOneCard = document.querySelector('.playerOneCard')
   if (playerOneCard instanceof HTMLElement) {
-    playerOneCard.style.display = 'flex';
+    playerOneCard.style.display = 'flex'
   }
 
-  const gameButtons = document.querySelector('.gameButtons');
+  const gameButtons = document.querySelector('.gameButtons')
   if (gameButtons instanceof HTMLElement) {
     gameButtons.style.display = 'flex';
-    gameButtons.style.justifyContent = 'space-around';
+    gameButtons.style.justifyContent = 'space-around'
   }
 
   if (playerTwoChoice === '') {
-    const endLabel = document.querySelector('.label');
+    const endLabel = document.querySelector('.label')
     if (endLabel instanceof HTMLHeadingElement) {
-      endLabel.textContent = 'You must pick before ending your turn!';
+      endLabel.textContent = 'You must pick before ending your turn!'
     }
-    return;
+    return
   }
 
   if (playerOneChoice === playerTwoChoice) {
-    const draw = document.querySelector('.label');
+    const draw = document.querySelector('.label')
     if (draw instanceof HTMLHeadingElement) {
-      draw.textContent = 'It is a draw!';
+      draw.textContent = 'It is a draw!'
     }
-    return;
+    return
   }
 
   if (
@@ -203,47 +203,49 @@ function handleEndButtonPlayerTwo() {
     (playerOneChoice === 'scissor' && playerTwoChoice === 'lizard') ||
     (playerOneChoice === 'lizard' && playerTwoChoice === 'paper') ||
     (playerOneChoice === 'paper' && playerTwoChoice === 'spock') ||
-    (playerOneChoice === 'spock' && playerTwoChoice === 'rock')
+    (playerOneChoice === 'spock' && playerTwoChoice === 'rock') ||
+    (playerOneChoice === 'rock' && playerTwoChoice === 'lizard')
   ) {
-    const playerOneWin = document.querySelector('.playerOneScore');
-    playerOne++;
+    const playerOneWin = document.querySelector('.playerOneScore')
+    playerOne++
     if (playerOneWin instanceof HTMLElement) {
-      playerOneWin.textContent = `${playerOne}`;
+      playerOneWin.textContent = `${playerOne}`
     }
     const displayWinner = document.querySelector('.label');
     if (displayWinner instanceof HTMLHeadingElement) {
-      displayWinner.textContent = 'Player one wins!';
+      displayWinner.textContent = 'Player one wins!'
     }
   } else {
-    const playerTwoWin = document.querySelector('.playerTwoScore');
-    playerTwo++;
+    const playerTwoWin = document.querySelector('.playerTwoScore')
+    playerTwo++
     if (playerTwoWin instanceof HTMLElement) {
-      playerTwoWin.textContent = `${playerTwo}`;
+      playerTwoWin.textContent = `${playerTwo}`
     }
-    const displayWinner = document.querySelector('.label');
+    const displayWinner = document.querySelector('.label')
     if (displayWinner instanceof HTMLHeadingElement) {
-      displayWinner.textContent = 'Player two wins!';
+      displayWinner.textContent = 'Player two wins!'
     }
   }
 }
 
 
 
+
 // Start of the game function
 function handleStartTheGame() {
-  const playerTwoCard = document.querySelector('.playerTwoCard');
+  const playerTwoCard = document.querySelector('.playerTwoCard')
   if (playerTwoCard instanceof HTMLElement) {
-    playerTwoCard.style.display = 'none';
+    playerTwoCard.style.display = 'none'
   }
 
-  const startButton = document.querySelector('.start');
+  const startButton = document.querySelector('.start')
   if (startButton instanceof HTMLButtonElement) {
-    startButton.textContent = 'Start the GAME!';
+    startButton.textContent = 'Start the GAME!'
   }
 
-  const gameButtonsSection = document.querySelector('.gameButtons');
+  const gameButtonsSection = document.querySelector('.gameButtons')
   if (gameButtonsSection instanceof HTMLElement) {
-    gameButtonsSection.style.display = 'none';
+    gameButtonsSection.style.display = 'none'
   }
 }
 
