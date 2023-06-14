@@ -29,6 +29,12 @@ function handlePlayerOneScissorSelection() {
   playerOneChoice = 'scissor'
 }
 
+function handlePlayerOneSpockSelection() {
+  let spockElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
+  spockElement.src = 'https://t4.ftcdn.net/jpg/04/42/45/03/240_F_442450307_gHJBPwdChIgAXQ5CB0fXb3nIJboxQW36.jpg'
+  playerOneChoice = 'spock'
+}
+
 // PlayerTwo selections
 function handlePlayerTwoRockSelection() {
   let rockElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
@@ -49,6 +55,12 @@ function handlePlayerTwoScissorSelection() {
   scissorElement.src = 'https://i.pinimg.com/originals/ef/8d/3c/ef8d3c61d0b582fcd78e77c397014c16.jpg'
   
   playerTwoChoice = 'scissor'
+}
+
+function handlePlayerTwoSpockSelection() {
+  let spockElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
+  spockElement.src = 'https://t4.ftcdn.net/jpg/04/42/45/03/240_F_442450307_gHJBPwdChIgAXQ5CB0fXb3nIJboxQW36.jpg'
+  playerTwoChoice = 'spock'
 }
 
 // Handle the END button PlayerOne
