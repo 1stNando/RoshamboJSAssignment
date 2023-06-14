@@ -13,15 +13,12 @@ function handlePlayerOneRockSelection() {
   playerOneChoice = 'rock'
 }
 
-
-
 function handlePlayerOnePaperSelection() {
   let paperElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
   paperElement.src = 'https://w7.pngwing.com/pngs/512/78/png-transparent-paper-bag-shopping-bags-trolleys-book-bag-food-accessories-sticker-thumbnail.png'
   
   playerOneChoice = 'paper'
 }
-
 
 function handlePlayerOneScissorSelection() {
   let scissorElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
@@ -106,58 +103,126 @@ if (endButtonPlayerOne instanceof HTMLButtonElement) {
 }
 
 
-// Handle the END button PlayerTwo. End of game and comparison of choice to determine winner.
+// Handle the END button PlayerTwo. End of game and comparison of choice to determine winner.Largest piece of LOGIC for making the game work correctly!
+// function handleEndButtonPlayerTwo() {
+//   const playerOneCard = document.querySelector('.playerOneCard')
+//   if (playerOneCard instanceof HTMLElement) {
+//     playerOneCard.style.display = 'flex'
+//   }
+
+//   const gameButtons = document.querySelector('.gameButtons')
+//   if (gameButtons instanceof HTMLElement) {
+//     gameButtons.style.display = 'flex'
+//     gameButtons.style.justifyContent = 'space-around'
+//   }
+
+//   if (playerTwoChoice === '') {
+//     const endLabel = document.querySelector('.label')
+//     if (endLabel instanceof HTMLHeadingElement) {
+//       endLabel.textContent = 'You must pick before ending your turn!'
+//     }
+//     return
+//   }
+
+//   if (playerOneChoice === playerTwoChoice) {
+//     const draw = document.querySelector('.label')
+//     if (draw instanceof HTMLHeadingElement) {
+//       draw.textContent = 'It is a draw!'
+//     }
+//     return
+//   }
+
+//   if (
+//     (playerOneChoice === 'rock' && playerTwoChoice === 'scissor') ||
+//     (playerOneChoice === 'scissor' && playerTwoChoice === 'paper') ||
+//     (playerOneChoice === 'paper' && playerTwoChoice === 'rock') ||
+//     // Code below needed to handle Spock and Lizard option.
+//     (playerOneChoice === 'spock' && playerTwoChoice === 'scissor') ||
+//     (playerOneChoice === 'spock' && playerTwoChoice === 'rock') ||
+//     (playerOneChoice === 'lizard' && playerTwoChoice === 'spock') ||
+//     (playerOneChoice === 'paper' && playerTwoChoice === 'spock') ||
+//     (playerOneChoice === 'rock' && playerTwoChoice === 'lizard') ||
+//     (playerOneChoice === 'scissor' && playerTwoChoice === 'lizard') ||
+//     (playerOneChoice === 'lizard' &&  playerTwoChoice === 'paper')
+//   ) {
+//     const playerOneWin = document.querySelector('.playerOneScore')
+//     playerOne++;
+//     if (playerOneWin instanceof HTMLElement) {
+//       playerOneWin.textContent = `${playerOne}`
+//     }
+//     const displayWinner = document.querySelector('.label')
+//     if (displayWinner instanceof HTMLHeadingElement) {
+//       displayWinner.textContent = 'Player one wins!'
+//     }
+//   } else {
+//     const playerTwoWin = document.querySelector('.playerTwoScore')
+//     playerTwo++;
+//     if (playerTwoWin instanceof HTMLElement) {
+//       playerTwoWin.textContent = `${playerTwo}`
+//     }
+//     const displayWinner = document.querySelector('.label')
+//     if (displayWinner instanceof HTMLHeadingElement) {
+//       displayWinner.textContent = 'Player two wins!'
+//     }
+//   }
+// }
 function handleEndButtonPlayerTwo() {
-  const playerOneCard = document.querySelector('.playerOneCard')
+  const playerOneCard = document.querySelector('.playerOneCard');
   if (playerOneCard instanceof HTMLElement) {
-    playerOneCard.style.display = 'flex'
+    playerOneCard.style.display = 'flex';
   }
 
-  const gameButtons = document.querySelector('.gameButtons')
+  const gameButtons = document.querySelector('.gameButtons');
   if (gameButtons instanceof HTMLElement) {
-    gameButtons.style.display = 'flex'
-    gameButtons.style.justifyContent = 'space-around'
+    gameButtons.style.display = 'flex';
+    gameButtons.style.justifyContent = 'space-around';
   }
 
   if (playerTwoChoice === '') {
-    const endLabel = document.querySelector('.label')
+    const endLabel = document.querySelector('.label');
     if (endLabel instanceof HTMLHeadingElement) {
-      endLabel.textContent = 'You must pick before ending your turn!'
+      endLabel.textContent = 'You must pick before ending your turn!';
     }
-    return
+    return;
   }
 
   if (playerOneChoice === playerTwoChoice) {
-    const draw = document.querySelector('.label')
+    const draw = document.querySelector('.label');
     if (draw instanceof HTMLHeadingElement) {
-      draw.textContent = 'It is a draw!'
+      draw.textContent = 'It is a draw!';
     }
-    return
+    return;
   }
 
   if (
-    (playerOneChoice === 'rock' && playerTwoChoice === 'scissor') ||
     (playerOneChoice === 'scissor' && playerTwoChoice === 'paper') ||
-    (playerOneChoice === 'paper' && playerTwoChoice === 'rock')
+    (playerOneChoice === 'paper' && playerTwoChoice === 'rock') ||
+    (playerOneChoice === 'rock' && playerTwoChoice === 'scissor') ||
+    (playerOneChoice === 'lizard' && playerTwoChoice === 'spock') ||
+    (playerOneChoice === 'spock' && playerTwoChoice === 'scissor') ||
+    (playerOneChoice === 'scissor' && playerTwoChoice === 'lizard') ||
+    (playerOneChoice === 'lizard' && playerTwoChoice === 'paper') ||
+    (playerOneChoice === 'paper' && playerTwoChoice === 'spock') ||
+    (playerOneChoice === 'spock' && playerTwoChoice === 'rock')
   ) {
-    const playerOneWin = document.querySelector('.playerOneScore')
+    const playerOneWin = document.querySelector('.playerOneScore');
     playerOne++;
     if (playerOneWin instanceof HTMLElement) {
-      playerOneWin.textContent = `${playerOne}`
+      playerOneWin.textContent = `${playerOne}`;
     }
-    const displayWinner = document.querySelector('.label')
+    const displayWinner = document.querySelector('.label');
     if (displayWinner instanceof HTMLHeadingElement) {
-      displayWinner.textContent = 'Player one wins!'
+      displayWinner.textContent = 'Player one wins!';
     }
   } else {
-    const playerTwoWin = document.querySelector('.playerTwoScore')
+    const playerTwoWin = document.querySelector('.playerTwoScore');
     playerTwo++;
     if (playerTwoWin instanceof HTMLElement) {
-      playerTwoWin.textContent = `${playerTwo}`
+      playerTwoWin.textContent = `${playerTwo}`;
     }
-    const displayWinner = document.querySelector('.label')
+    const displayWinner = document.querySelector('.label');
     if (displayWinner instanceof HTMLHeadingElement) {
-      displayWinner.textContent = 'Player two wins!'
+      displayWinner.textContent = 'Player two wins!';
     }
   }
 }

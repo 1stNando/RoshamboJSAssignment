@@ -26,3 +26,15 @@ V1 is "Paper", and V2 is "Rock", player1 WINS!
 
  
 
+R,P,S,Spock, Lizard:
+
+scissor beats paper,
+paper beats rock,
+rock beats scissor,
+
+lizard beats spock,
+spock beats scissor,
+scissor beats lizard,
+lizard beats paper,
+paper beats spock,
+spock beats rock
