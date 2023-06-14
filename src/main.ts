@@ -49,26 +49,35 @@ function handlePlayerTwoScissorSelection() {
 }
 
 // Handle the END button PlayerOne
+// This first part deals with the event that P1 tries to click the end turn before clicking on an option.
+// This part's focus is to HIDE the P1Card AFTER P1 clicks the end turn.
+// This last part handles the display of P2Card to be centered in the page.
 function handleEndButtonPlayerOne() {
-  // This first part deals with the event that P1 tries to click the end turn before clicking on an option.
   if (playerOneChoice === '') {
-    const endLabel = document.querySelector('.label')
-    if (endLabel instanceof HTMLButtonElement)
-    endLabel.textContent = 'Please click your choice before you end this turn'
-    return
+    const endLabel = document.querySelector('.label');
+    if (endLabel instanceof HTMLHeadingElement) {
+      endLabel.textContent = 'Please click your choice before you end this turn';
+    }
+    return;
   }
 
-  // This part's focus is to HIDE the P1Card AFTER P1 clicks the end turn.
-  const playerOneHidden = document.querySelector('.playerOneCard')
-  if (playerOneHidden instanceof HTMLBodyElement)
-  playerOneHidden.style.display = 'none'
+  const playerOneCard = document.querySelector('.playerOneCard');
+  if (playerOneCard instanceof HTMLElement) {
+    playerOneCard.style.display = 'none';
+  }
 
-  // This last part handles the display of P2Card to be centered in the page.
-  const playerTwoCard = document.querySelector('.playerTwoCard')
-  if (playerTwoCard instanceof HTMLBodyElement)
-  playerTwoCard.style.display = 'flex'
-
+  const playerTwoCard = document.querySelector('.playerTwoCard');
+  if (playerTwoCard instanceof HTMLElement) {
+    playerTwoCard.style.display = 'flex';
+  }
 }
+
+// Add event listener to the end button
+const endButtonPlayerOne = document.querySelector('.endButtonPlayerOne button');
+if (endButtonPlayerOne instanceof HTMLButtonElement) {
+  endButtonPlayerOne.addEventListener('click', handleEndButtonPlayerOne);
+}
+
 
 // Handle the END button PlayerTwo. End of game and comparison of choice to determine winner.
 function handleEndButtonPlayerTwo() {
