@@ -13,12 +13,15 @@ function handlePlayerOneRockSelection() {
   playerOneChoice = 'rock'
 }
 
+
+
 function handlePlayerOnePaperSelection() {
-  let paperElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')! 
+  let paperElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
   paperElement.src = 'https://w7.pngwing.com/pngs/512/78/png-transparent-paper-bag-shopping-bags-trolleys-book-bag-food-accessories-sticker-thumbnail.png'
   
   playerOneChoice = 'paper'
 }
+
 
 function handlePlayerOneScissorSelection() {
   let scissorElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
@@ -35,7 +38,7 @@ function handlePlayerTwoRockSelection() {
 }
 
 function handlePlayerTwoPaperSelection() {
-  let paperElement:HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
+  let paperElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
   paperElement.src = 'https://w7.pngwing.com/pngs/512/78/png-transparent-paper-bag-shopping-bags-trolleys-book-bag-food-accessories-sticker-thumbnail.png'
   
   playerTwoChoice = 'paper'
@@ -54,21 +57,21 @@ function handlePlayerTwoScissorSelection() {
 // This last part handles the display of P2Card to be centered in the page.
 function handleEndButtonPlayerOne() {
   if (playerOneChoice === '') {
-    const endLabel = document.querySelector('.label');
+    const endLabel = document.querySelector('.label')
     if (endLabel instanceof HTMLHeadingElement) {
-      endLabel.textContent = 'Please click your choice before you end this turn';
+      endLabel.textContent = 'Please click your choice before you end this turn'
     }
-    return;
+    return
   }
 
-  const playerOneCard = document.querySelector('.playerOneCard');
+  const playerOneCard = document.querySelector('.playerOneCard')
   if (playerOneCard instanceof HTMLElement) {
-    playerOneCard.style.display = 'none';
+    playerOneCard.style.display = 'none'
   }
 
-  const playerTwoCard = document.querySelector('.playerTwoCard');
+  const playerTwoCard = document.querySelector('.playerTwoCard')
   if (playerTwoCard instanceof HTMLElement) {
-    playerTwoCard.style.display = 'flex';
+    playerTwoCard.style.display = 'flex'
   }
 }
 
@@ -81,31 +84,31 @@ if (endButtonPlayerOne instanceof HTMLButtonElement) {
 
 // Handle the END button PlayerTwo. End of game and comparison of choice to determine winner.
 function handleEndButtonPlayerTwo() {
-  const playerOneCard = document.querySelector('.playerOneCard');
+  const playerOneCard = document.querySelector('.playerOneCard')
   if (playerOneCard instanceof HTMLElement) {
-    playerOneCard.style.display = 'flex';
+    playerOneCard.style.display = 'flex'
   }
 
-  const gameButtons = document.querySelector('.gameButtons');
+  const gameButtons = document.querySelector('.gameButtons')
   if (gameButtons instanceof HTMLElement) {
-    gameButtons.style.display = 'flex';
-    gameButtons.style.justifyContent = 'space-around';
+    gameButtons.style.display = 'flex'
+    gameButtons.style.justifyContent = 'space-around'
   }
 
   if (playerTwoChoice === '') {
-    const endLabel = document.querySelector('.label');
+    const endLabel = document.querySelector('.label')
     if (endLabel instanceof HTMLHeadingElement) {
-      endLabel.textContent = 'You must pick before ending your turn!';
+      endLabel.textContent = 'You must pick before ending your turn!'
     }
-    return;
+    return
   }
 
   if (playerOneChoice === playerTwoChoice) {
-    const draw = document.querySelector('.label');
+    const draw = document.querySelector('.label')
     if (draw instanceof HTMLHeadingElement) {
-      draw.textContent = 'It is a draw!';
+      draw.textContent = 'It is a draw!'
     }
-    return;
+    return
   }
 
   if (
@@ -113,27 +116,28 @@ function handleEndButtonPlayerTwo() {
     (playerOneChoice === 'scissor' && playerTwoChoice === 'paper') ||
     (playerOneChoice === 'paper' && playerTwoChoice === 'rock')
   ) {
-    const playerOneWin = document.querySelector('.playerOneScore');
+    const playerOneWin = document.querySelector('.playerOneScore')
     playerOne++;
     if (playerOneWin instanceof HTMLElement) {
-      playerOneWin.textContent = `${playerOne}`;
+      playerOneWin.textContent = `${playerOne}`
     }
-    const displayWinner = document.querySelector('.label');
+    const displayWinner = document.querySelector('.label')
     if (displayWinner instanceof HTMLHeadingElement) {
-      displayWinner.textContent = 'Player one wins!';
+      displayWinner.textContent = 'Player one wins!'
     }
   } else {
-    const playerTwoWin = document.querySelector('.playerTwoScore');
+    const playerTwoWin = document.querySelector('.playerTwoScore')
     playerTwo++;
     if (playerTwoWin instanceof HTMLElement) {
-      playerTwoWin.textContent = `${playerTwo}`;
+      playerTwoWin.textContent = `${playerTwo}`
     }
-    const displayWinner = document.querySelector('.label');
+    const displayWinner = document.querySelector('.label')
     if (displayWinner instanceof HTMLHeadingElement) {
-      displayWinner.textContent = 'Player two wins!';
+      displayWinner.textContent = 'Player two wins!'
     }
   }
 }
+
 
 
 // Start of the game function
@@ -157,11 +161,13 @@ function handleStartTheGame() {
 
 // End of the game function
 function handleEndTheGame() {
-  const valueCountPlayer1 = document.querySelector('.playerOneScore') 
+  const valueCountPlayer1 = document.querySelector('.playerOneScore')
   playerOne = 0
-  if (valueCountPlayer1 instanceof HTMLBodyElement)
-  valueCountPlayer1.textContent = `${playerOne}`
+  if (valueCountPlayer1 instanceof HTMLElement) {
+    valueCountPlayer1.textContent = `${playerOne}`
+  }
 }
+
 
 
 // Main game. NOTE: we first had to write all the functions for each action before being able to apply them. Only then could we put together the code for "main".
@@ -175,7 +181,7 @@ const main = () => {
   const playerOneScissors = document.querySelector('.playerOneCard .scissors')
   playerOneScissors?.addEventListener('click', handlePlayerOneScissorSelection)
 
-  // Player Two handlers'
+  // Player Two handlers
   const playerTwoRock = document.querySelector('.playerTwoCard .rock')
   playerTwoRock?.addEventListener('click', handlePlayerTwoRockSelection)
 
@@ -192,13 +198,11 @@ const main = () => {
   const buttonPlayerTwo = document.querySelector('.endButtonPlayerTwo button')
   buttonPlayerTwo?.addEventListener('click', handleEndButtonPlayerTwo)
 
-  const startGame = document.querySelector('.gameButtons')
+  const startGame = document.querySelector('.start')
   startGame?.addEventListener('click', handleStartTheGame)
 
-  const endGame = document.querySelector('.gameButtons')
+  const endGame = document.querySelector('.end')
   endGame?.addEventListener('click', handleEndTheGame)
-
 }
-
 //content load method
 document.addEventListener('DOMContentLoaded', main)
