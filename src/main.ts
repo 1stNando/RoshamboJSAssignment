@@ -35,6 +35,12 @@ function handlePlayerOneSpockSelection() {
   playerOneChoice = 'spock'
 }
 
+function handlePlayerOneLizzardSelection() {
+  let lizzardElement: HTMLImageElement = document.querySelector('.playerOneCard .blankImage')!
+  lizzardElement.src = 'https://t4.ftcdn.net/jpg/01/25/29/81/240_F_125298142_RssOlalEHDR7uEqRPwM7k3ine0Mfh9my.jpg'
+  playerOneChoice = 'spock'
+}
+
 // PlayerTwo selections
 function handlePlayerTwoRockSelection() {
   let rockElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
@@ -60,6 +66,12 @@ function handlePlayerTwoScissorSelection() {
 function handlePlayerTwoSpockSelection() {
   let spockElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
   spockElement.src = 'https://t4.ftcdn.net/jpg/04/42/45/03/240_F_442450307_gHJBPwdChIgAXQ5CB0fXb3nIJboxQW36.jpg'
+  playerTwoChoice = 'spock'
+}
+
+function handlePlayerTwoLizzardSelection() {
+  let lizzardElement: HTMLImageElement = document.querySelector('.playerTwoCard .blankImage')!
+  lizzardElement.src = 'https://t4.ftcdn.net/jpg/01/25/29/81/240_F_125298142_RssOlalEHDR7uEqRPwM7k3ine0Mfh9my.jpg'
   playerTwoChoice = 'spock'
 }
 
